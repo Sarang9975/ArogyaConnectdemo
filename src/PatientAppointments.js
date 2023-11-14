@@ -1278,6 +1278,7 @@
  import 'react-datepicker/dist/react-datepicker.css'; // Import the date picker styles
 import './PatientAppointments.css';
  import Photo from './papoint.png';
+ import Chatbot from "./ChatBot.js";
 
 
 function PatientAppointments({ patientName }) {
@@ -1433,6 +1434,7 @@ function PatientAppointments({ patientName }) {
         <img src={Photo} alt="Doctor and patient" className="docimg" />
       </div>
      </div>
+     <Chatbot/>
      </div>
    );
  }
