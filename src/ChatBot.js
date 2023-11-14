@@ -31,11 +31,11 @@ const Chatbot = () => {
     } else if (lowerCaseMessage.includes('help')) {
       botMessage = "Certainly! What specific assistance do you require? You can ask about appointments, services, or general inquiries.";
     } else if (lowerCaseMessage.includes('appointment')) {
-      botMessage = "To book an appointment, you can visit our online appointment page or call our reception at 123-456-7890. Would you like information on available doctors or times?";
+      botMessage = "To book an appointment, you can visit our online appointment page or call our reception at +917387130524 or +919356274667. Would you like information on available doctors or times?";
     } else if (lowerCaseMessage.includes('services')) {
       botMessage = "We provide a range of medical services including general health check-ups, specialist consultations, diagnostics, and emergency care. Is there a specific service you're interested in?";
     } else if (lowerCaseMessage.includes('contact')) {
-      botMessage = "For general inquiries, email us at contact@ourclinic.com. For appointments, call 123-456-7890. In case of emergencies, dial our emergency number: 112-334-5566.";
+      botMessage = "For general inquiries, email us at arogyaconnectwork@gmail.com. For appointments, call +917387130524 or +919356274667. In case of emergencies, dial our emergency number: 112-334-5566.";
     } else if (lowerCaseMessage.includes('thank')) {
       botMessage = "You're welcome! Your health is our top priority. Do you have any other questions?";
     } else if (lowerCaseMessage.includes('emergency')) {
@@ -43,7 +43,7 @@ const Chatbot = () => {
     } else if (lowerCaseMessage.includes('hours') || lowerCaseMessage.includes('opening times')) {
       botMessage = "Our clinic is open Monday to Friday, 8:00 AM to 6:00 PM. On Saturdays, we're open from 9:00 AM to 3:00 PM. We're closed on Sundays.";
     } else if (lowerCaseMessage.includes('location')) {
-      botMessage = "We're located at 123 Health St. in Wellness City. You can find directions and more details on our website.";
+      botMessage = "We're located at St. Vincent Pallotti College of Engineering and Technology. You can find directions and more details on our website.";
     } else if (lowerCaseMessage.includes('prescription') || lowerCaseMessage.includes('medication')) {
       botMessage = "For prescription refills, please contact your doctor or use our online prescription service. Do you need help with a specific medication?";
     }
