@@ -11,11 +11,15 @@ import Homepage from './Homepage.js';
 import About from './About.js';
 function App() {
   const [user, setUser] = useState(null);
+  //Added some inline styline so due to removal of Login and Register Links
+  const mainContentStyle = {
+    marginTop: "65px", // Adjust this value based on your navbar's height
+  };
 
   return (
     <Router>
       <Navbar />
-      <div className="App">
+      <div className="App" style={mainContentStyle}>
         <Routes>
           <Route path="/login" element={<Login setUser={setUser} />} />
           <Route path="/register" element={<Register setUser={setUser} />} />
