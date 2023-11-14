@@ -366,7 +366,7 @@ a:hover {
 }
 
 .App-footer .social-media img {
-  width: 100px; /* Adjust as needed */
+  width: 35px; /* Adjust as needed */
   height: auto;
 }
 
@@ -387,6 +387,9 @@ a:hover {
 
   .App-footer .social-media {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
   }
 }
 
