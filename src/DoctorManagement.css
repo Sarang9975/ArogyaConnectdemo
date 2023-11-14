@@ -1,0 +1,187 @@
+/* DoctorManagement.css */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #C8ECF2;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #2A3F54;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    margin-right: 20px;
+    /* Add your logo image style here */
+  }
+  
+  .nav-item {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    /* Additional hover effects and styles for navigation items */
+  }
+  
+  /* Main content area */
+  .main-content {
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #32404D;
+    padding: 20px;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    margin-top: 150px;
+    border-radius: 20px;
+  }
+  
+  .sidebar-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin-top: 120px;
+    margin-left: 40px;
+    /* Additional hover effects and styles for sidebar items */
+  }
+  
+  .content-area {
+    flex-grow: 1;
+    background-color: #DCFFFB;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-top: 150px;
+  }
+  
+  /* Header greeting and selection */
+  .greeting-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #6C7A89;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  /* Statistics cards */
+  .stats-card {
+    background-color: #3498DB;
+    color: white;
+    padding: 1em;
+    border-radius: 10px;
+    margin-right: 20px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .stats-card:last-child {
+    margin-right: 0;
+  }
+  
+  .stats-cards-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  /* Table-like structure for appointments */
+  .appointments-list {
+    width: 100%;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    height: 400px;
+    width: auto;
+    /* Additional table styles */
+  }
+  
+  /* Logout button */
+  .logout-button {
+    background-color: #E74C3C;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    float: right; /* Align the logout button to the right */
+    margin: 20px 0;
+  }
+  
+  .logout-button:hover {
+    background-color: #C0392B;
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .content-area {
+      margin-left: 0;
+    }
+  
+    .stats-cards-container {
+      flex-direction: column;
+    }
+  
+    .stats-card {
+      margin-bottom: 20px;
+    }
+  
+    .stats-card:last-child {
+      margin-right: 0;
+    }
+  }
+  
+
+
+  /* DoctorManagement.css */
+/* ... other styles ... */
+
+.dashboard-header {
+    position: relative; /* This makes it a positioning context for absolute children */
+    /* ... other styles ... */
+  }
+  
+  
+  
+  .header-image {
+    position: absolute;
+    top: 100%; /* Align the top of the image with the bottom of the header */
+    left: 60%; /* Center the image horizontally */
+    transform: translate(-50%, -50%); /* Center the image precisely */
+    width: 500px; /* Keep the image's aspect ratio */
+    height: 200px; /* Adjust based on your preference */
+    z-index: 10; /* Make sure it's above other content */
+padding-bottom: 76%;  }
+  
+  /* Main content area adjustments */
+  .main-content {
+    padding-top: 50px; /* Add padding to top to push content below the overlapping image */
+    /* ... other styles ... */
+  }
+  
+  /* ... other styles ... */
+  

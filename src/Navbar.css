@@ -1,0 +1,72 @@
+/* Navbar.css */
+/* Navbar.css */
+.navbar {
+  background-color: #DCFFFB;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  height: 35px; /* Set a fixed height for your navbar */
+  
+  position: fixed; /* This will make the navbar fixed */
+  top: 0; /* This will position the navbar at the top */
+  left: 0; /* Aligns navbar to the left edge */
+  right: 0; /* Ensures navbar extends to the right edge */
+  z-index: 1000; /* Ensures navbar stays on top of other elements */
+}
+
+
+.navbar-logo {
+  padding-left: 50px;
+  display: flex;
+  align-items: center; /* Centers the logo vertically */
+  height: 100%; /* Use the full height of the navbar */
+}
+
+.navbar-logo img {
+  max-height: 240px; /* Logo's max height is limited by the navbar's height */
+  width: auto; /* Auto width to maintain aspect ratio */
+}
+
+.navbar-list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* ...rest of your styles... */
+
+
+.navbar-item {
+  margin: 0 10px; /* Add some space between the navbar items */
+}
+
+.navbar-item a {
+  color: #757575;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 650;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s, color 0.3s; /* Add transition for smoother hover effect */
+}
+
+.navbar-item a:hover {
+  background-color: #C1E7E3; /* Darker green color on hover */
+  color: #fff; /* White text color on hover */
+  border-radius: 4px; /* Add rounded corners on hover */ 
+  text-decoration: none !important;
+}
+
+.logo-link:hover {
+  background-color: transparent;
+  text-decoration: none !important; /* This will remove the underline */
+  color: inherit; /* This will keep the text color the same on hover */
+}
+
+.navbar .navbar-logo .logo-link:hover {
+  background-color: transparent;
+  text-decoration: none !important;
+}
+

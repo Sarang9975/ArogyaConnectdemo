@@ -1,0 +1,226 @@
+/* Login.css */
+
+/* Apply a background to the entire login page, if needed */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Use the full height of the viewport */
+    background-color: #C8ECF2; /* The background color of the page */
+  }
+  
+  /* Style the form and center it on the page */
+  .form-container2 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    background: #fff; /* White background for the form */
+    padding: 20px !important;
+    border-radius: 8px !important; /* Rounded corners for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* A subtle shadow */
+    width: 250px !important; /* Fixed width, you can adjust as needed */
+    margin-right: auto !important; /* Align to center */
+    margin-left: auto !important; /* Align to center */
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    padding-bottom: 30% !important;
+    height: 5px !important;
+    margin-top: -100px;
+  }
+  
+  /* Style for the form's heading */
+  .form-container h2 {
+    color: #333; /* Dark text for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  /* Styles for form groups */
+  .form-group {
+    margin-bottom: 15px; /* Space between form groups */
+    width: 100%; /* Full width of the parent */
+  }
+  
+  .form-group2 label {
+    display: block; /* Ensure the label is on its own line */
+    margin-bottom: 5px; /* Space between label and input */
+    margin-left: 30px;
+   
+  }
+  
+  .form-group2 input,
+  .form-group2 select {
+    width: 200px !important; /* Full width of the parent */
+    padding: 10px; /* Padding inside the inputs */
+    border: 1px solid #ddd; /* A subtle border */
+    border-radius: 4px; /* Slightly rounded borders */
+    margin-bottom: 10px;
+    margin-left: 15px;
+    
+  }
+  .form-group2 input:not(:last-child),
+.form-group2 select:not(:last-child) {
+  margin-bottom: 15px; /* Increase the bottom margin to create more vertical space */
+}
+
+  /* Style for the button */
+  button {
+    width: 100%; /* Full width of the parent */
+    padding: 10px; /* Padding inside the button */
+    background-color: #5cb85c; /* A green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Slightly rounded borders */
+    cursor: pointer; /* The hand cursor on hover */
+  }
+  
+  button:hover {
+    background-color: #4cae4c; /* A darker green on hover */
+  }
+  
+  /* Style for the image on the right */
+  .login-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-image img {
+    
+    width: auto;
+    height: px; /* Maintain aspect ratio */
+    animation: float 3s ease-in-out infinite;
+    padding-bottom: 20%;
+  }
+  
+  /* Add this to your existing media queries if you want to adjust layout on smaller screens */
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+    }
+  
+    .login-image {
+      width: 100%; /* Full width on small screens */
+      order: -1; /* Image above the form on small screens */
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  h2{
+    text-align: center;
+  }
+  /* Login.css */
+
+/* Apply a background to the entire login page, if needed */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Use the full height of the viewport */
+    background-color: #C8ECF2; /* The background color of the page */
+  }
+  
+  /* Style the form and center it on the page */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A subtle shadow */
+    width: 250px; /* Fixed width, you can adjust as needed */
+    margin-right: auto; /* Align to center */
+    margin-left: auto; /* Align to center */
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-bottom: 30%;
+    height: 5px;
+  }
+  
+  /* Style for the form's heading */
+  .form-container h2 {
+    color: #333; /* Dark text for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  /* Styles for form groups */
+  .form-group {
+    margin-bottom: 15px; /* Space between form groups */
+    width: 100%; /* Full width of the parent */
+  }
+  
+  .form-group label {
+    display: block; /* Ensure the label is on its own line */
+    margin-bottom: 5px; /* Space between label and input */
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%; /* Full width of the parent */
+    padding: 10px; /* Padding inside the inputs */
+    border: 1px solid #ddd; /* A subtle border */
+    border-radius: 4px; /* Slightly rounded borders */
+    
+  }
+  
+  /* Style for the button */
+  button {
+    width: 100%; /* Full width of the parent */
+    padding: 10px; /* Padding inside the button */
+    background-color: #5cb85c; /* A green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Slightly rounded borders */
+    cursor: pointer; /* The hand cursor on hover */
+  }
+  
+  button:hover {
+    background-color: #4cae4c; /* A darker green on hover */
+  }
+  
+  /* Style for the image on the right */
+  .login-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px; /* Takes up half of the container's width */
+  }
+  
+  .login-image img {
+    max-width: 100%; /* Ensure it's responsive and doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
+    animation: float 3s ease-in-out infinite;
+    padding-bottom: 20%;
+  }
+  
+  /* Add this to your existing media queries if you want to adjust layout on smaller screens */
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+    }
+  
+    .login-image {
+      width: 100%; /* Full width on small screens */
+      order: -1; /* Image above the form on small screens */
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  h2{
+    text-align: center;
+  }
+  

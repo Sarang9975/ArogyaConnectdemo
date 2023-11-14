@@ -1,0 +1,549 @@
+/* App.css */
+*{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.darkwla{
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  color:#253DA1 !important;
+
+}
+h2{
+  font-weight: lighter;
+  font-size: 20px ;
+}
+
+
+.App {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #C8ECF2;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App-header {
+  background: #c8ecf2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.App-header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.App-header nav ul li {
+  padding: 0 15px;
+}
+
+.App-header nav ul li a {
+  text-decoration: none;
+  color: #5a5a5a;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.App-header nav ul li a:hover,
+.App-header nav ul li a:focus {
+  color: #3498db;
+}
+
+.hero {
+  text-align: left !important;
+  padding: 80px 50px;
+  color: #000000be;
+  font-size: larger;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.hero h1 {
+  margin-bottom: 0.5em;
+  color: #000000be;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.hero h2{
+  text-align: left;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5em;
+}
+
+.hero button {
+  background: #3498db;
+  color: #ffffff ;
+  border: none;
+  padding: 15px 30px !important;
+  margin: 10px !important;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  width: auto;
+  height: 50px;
+  margin-left: -100px;
+}
+
+.hero button:hover,
+.hero button:focus {
+  background: #2980b9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.mission h1 {
+    text-align: center;
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 1em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.mission p {
+    text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 1.5em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+}
+
+.mission ul {
+    text-align: center;
+  padding-left: 20px;
+  font-weight: 500;
+}
+
+.mission li {
+    text-align: center;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+}
+
+
+.whyarogya-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 25px;
+  padding: 60px 50px;
+  color: #5a5a5a;
+  
+}
+
+.whyarogya-content h1 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+
+.whyarogya-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5em;
+}
+
+.whyarogya-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.feature-block {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center the content */
+  text-align: center;
+  gap: 10px; /* Add space between image and text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease; /* Smooth transition for shadow and transform */
+}
+
+.feature-block:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Larger shadow for the glow effect */
+  transform: translateY(-5px); /* Optional: Slightly raise the block */
+}
+
+
+.feature-image {
+  width: 100%; /* Set image width. Adjust as needed. */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 150px; /* Maximum width of the image */
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.whyarogya-info2 {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 30px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.320, 1.275), box-shadow 0.3s ease;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg); /* Initial state with perspective */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  will-change: transform, box-shadow;
+}
+
+.whyarogya-info2:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(10deg); /* 3D tilt effect */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+}
+
+
+
+@media (max-width: 768px) {
+  .whyarogya-content {
+    grid-template-columns: 1fr;
+  }
+
+  .whyarogya-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+
+
+
+.recent-enhancements {
+  background: #E5F4FF; /* Assuming a white background for contrast */
+  padding: 60px 50px; /* Adjust padding as needed */
+  text-align: left; /* Center align the content */
+  margin-top: 20px; /* Add space above the section */
+  border-radius: 10px;
+}
+
+.recent-enhancements h1 {
+  color: #2c3e50; /* Match the style of other headings */
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+.recent-enhancements h2 {
+  color: #2c3e50; /* Match the style of other headings */
+  margin-bottom: 1em;
+}
+
+.recent-enhancements p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5em;
+  color: #5a5a5a; /* Match the style of other paragraphs */
+}
+
+.recent-enhancements .see-more-btn {
+  background: #3498db;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  width: auto;
+  height: 50px;
+  margin-left: 0;
+}
+
+.recent-enhancements .see-more-btn:hover,
+.recent-enhancements .see-more-btn:focus {
+  background: #2980b9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* Add a max-width to ensure readability on larger screens */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Additional global styles */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .mission h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Responsive Padding */
+@media (max-width: 768px) {
+  .hero, .mission {
+    padding: 40px 20px;
+  }
+}
+
+
+
+/* AAAAAAAAAA FOOOOTTTERERRRR */
+.App-footer {
+  background: #C8ECF2;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0;
+  font-size: 1.2rem;
+}
+
+.App-footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.App-footer .footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.App-footer .footer-section h4 {
+  color: #0c1112;
+  margin-bottom: 15px;
+}
+
+.App-footer .footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.App-footer .footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.App-footer .footer-section p,
+.App-footer .footer-section li {
+  color: #111c1e;
+  line-height: 1.4;
+}
+
+.App-footer .footer-section .logo {
+  align-items: flex-start;
+}
+
+/* Social media icons */
+.App-footer .social-media a {
+  display: inline-block;
+  margin-right: 10px;
+
+}
+
+.App-footer .social-media img {
+  width: 100px; /* Adjust as needed */
+  height: auto;
+}
+
+/* Responsive design for the footer */
+@media (max-width: 768px) {
+  .App-footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .App-footer .footer-section {
+    margin-bottom: 20px;
+  }
+
+  .App-footer .footer-section h4 {
+    text-align: center;
+  }
+
+  .App-footer .social-media {
+    text-align: center;
+  }
+}
+
+
+/* Add this to your Homepage.css */
+
+.hero-image {
+    width: 650px; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    position:static; /* or relative, depending on your layout */
+    margin-top: -150px; /* Negative margin to move the image up */
+    margin-right: -70px ;
+    top: -1; /* Adjust as needed */
+    left: 0; /* Adjust as needed */
+    z-index: -1; /* Ensures the image stays in the background */
+    float: right;
+    animation: floatAnimation 3s ease-in-out infinite;
+    
+    
+    
+  }
+  
+  .mission-image {
+    width: 700px; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    margin: 0 auto; /* Centers the image if the parent is flex or grid */
+    float: left;
+    animation: floatAnimation 3s ease-in-out infinite;
+  }
+
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  
+  .telemedicine-image {
+    width: 400px; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    margin: 20px 0; /* Adds some space around the image */
+    float: right;
+    animation: floatAnimation 3s ease-in-out infinite;
+  }
+  
+  /* Ensure you adjust the selectors and values according to your specific layout and the class names you have used */
+  .social-icon {
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    margin: 0 10px; /* Adds horizontal space between icons */
+  }
+    
+
+.logo{
+    width: 250px;
+    height: auto;
+}
+ 
+
+
+
+.mission {
+  display: flex;
+  background: #E5F4FF;
+  
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%; /* Make the .mission block full width */
+  margin: 0; /* Remove any default margins */
+  border-radius: 20px;
+}
+
+
+.mission-image-container {
+  flex-basis: 50%; /* Takes up half the width */
+  text-align: center; /* Centers the image if it's not full width */
+  padding-top: 5%;
+}
+
+.mission-image {
+  max-width: 100%; /* Ensures the image is responsive */
+  height: auto;
+}
+
+.whyarogya-info {
+  flex: 0 50%; /* Do not grow, but take up 50% of the space */
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: flex-basis 0.3s ease, padding 0.3s ease; /* Animate changes in flex-basis and padding */
+}
+
+.whyarogya-info:hover {
+  flex-basis: 100%; /* Expand to take the full width of the container */
+  padding: 20px 5%; /* Adjust padding to maintain the content's spacing */
+}
+
+
+/* Adding `!important` to force override, but use this sparingly */
+.login-button {
+  background-color: #E5F4FF !important;
+  color: black !important;
+}
+
+/* Or, you can increase specificity by adding the parent selector */
+.some-parent .login-button {
+  background-color: #E5F4FF;
+  color: #fff;
+}
+
+
+.telemed{
+  font-size: 25px !important;
+  color: #253DA1 !important;
+ }
+
+
+ @keyframes typewriter {
+  0%, 100% {
+    max-width: 0;
+  }
+  50%, 90% {
+    max-width: 10em; /* Ensure this is wide enough for the longest word */
+  }
+}
+
+@keyframes blinkCursor {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+
+.typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 3px solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keep the content on a single line */
+  animation: typewriter 8s steps(40) infinite normal both, /* Slow down the animation */
+             blinkCursor 1s steps(40) infinite normal;
+  max-width: 10em; /* Ensure this is wide enough for the longest word */
+  position: relative;
+  top: 50%; /* Adjust this value as needed */
+  transform: translateY(21%);
+}
+
+.seemore{
+  margin-left: -10px;
+  margin-top: 60px;
+  
+}
+
+.foot{
+  margin-bottom: 40px;
+}

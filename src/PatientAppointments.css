@@ -1,0 +1,151 @@
+/* PatientAppointments.css */
+
+.appointments-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+  }
+  
+  .appointments-form {
+    flex: 1;
+    padding-right: 20px; /* Adjust spacing between form and image */
+  }
+  
+  .greeting h1,
+  .greeting h2 {
+    margin-bottom: 10px;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px; /* Space between grid items */
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+
+  
+
+  textarea{
+    height: 100px !important;
+    width: 630px;
+    margin-top: 30px;
+margin-bottom: 30px;
+  }
+  .form-group label {
+    margin-bottom: 5px;
+  }
+  
+  .form-group select,
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    width: 300px;
+    height: 50px;
+  }
+  
+  .form-group button {
+    padding: 15px 20px;
+    background-color: #00A4CCFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  .form-group button:hover {
+    background-color: #007BFF;
+  }
+  
+  .appointments-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .docimg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .appointments-container {
+      flex-direction: column;
+    }
+    .appointments-form,
+    .appointments-image {
+      flex-basis: 100%;
+    }
+    .form-grid {
+      grid-template-columns: 1fr; /* Stack the grid items on small screens */
+    }
+  }
+  
+
+  /* ... existing styles ... */
+
+.button-group {
+    display: flex; /* Aligns buttons in a row */
+    align-items: center; /* Centers buttons vertically */
+    gap: 10px; /* Spaces out the buttons */
+  }
+  
+  .button {
+    padding: 10px 20px; /* Generic padding for all buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Style as needed for the buttons */
+  }
+  
+  .set-appointment {
+    background-color: #00A4CCFF;
+    color: white;
+    font-size: 1em; /* Bigger font size for the 'Set Appointment' button */
+    padding: 10px 30px; /* Bigger padding for the 'Set Appointment' button */
+  }
+  
+  .logout {
+    background-color: #f3f3f3;
+    color: #333;
+    font-size: 0.8em; /* Smaller font size for the 'Logout' button */
+    padding: 8px 15px; /* Smaller padding for the 'Logout' button */
+  }
+  
+  .set-appointment:hover {
+    background-color: #007BFF;
+  }
+  
+  .logout:hover {
+    background-color: #e1e1e1;
+  }
+  
+  /* ... existing styles ... */
+  
+  @media screen and (max-width: 768px) {
+    .button-group {
+      flex-direction: column;
+    }
+    .button {
+      width: 100%; /* Full width for buttons on smaller screens */
+      margin-bottom: 10px; /* Adds space between buttons when stacked */
+    }
+  }
+  
+
+ .book{
+    font-weight: bold !important;
+    text-align: center;
+    margin-top: -30px;
+ }
+  
+
