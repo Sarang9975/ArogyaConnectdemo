@@ -1352,6 +1352,7 @@ const PORT = process.env.PORT || 1000;
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.json());
 
 // Connect to MongoDB (replace 'your-connection-string' with your MongoDB connection string)
 mongoose.connect('mongodb+srv://Sarang123:Sarang9975@cluster0.efceamn.mongodb.net/test?retryWrites=true&w=majority', {
@@ -1573,26 +1574,64 @@ async function sendSMS(recipientPhoneNumber, message) {
   }
 }
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+
+//REAL_TIMINGS_UPDATE
+let isAvailable = false;
+
+function formatTime(date) {
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+
+    return `${hours}:${minutes} ${ampm}`;
+}
+
+function generateTimings() {
+    const timings = [];
+    const currentTime = new Date();
+    currentTime.setMinutes(currentTime.getMinutes() + 60); // Start from the next hour
+
+    for (let i = 0; i < 3; i++) {
+        timings.push(formatTime(currentTime));
+        currentTime.setMinutes(currentTime.getMinutes() + 60); // Increment by one hour
+    }
+
+    return timings;
+}
+
+app.post('/api/set-status', (req, res) => {
+    isAvailable = req.body.status === 'Available';
+    res.send({ message: 'Status updated' });
 });
 
+app.get('/api/timings', (req, res) => {
+    if (isAvailable) {
+        res.json({ items: generateTimings() });
+    } else {
+        res.json({ items: [] });
+    }
+});
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
+  
 
-
-
-
-
-
-
-
-// const express = require('express');
-// const mongoose = require('mongoose');
-// const bodyParser = require('body-parser');
-// const bcrypt = require('bcrypt');
-// const cors = require('cors');
-// const twilio = require('twilio');
-// const Razorpay = require('razorpay'); // Import Razorpay
-
+  
+  
+  
+  
+  // const express = require('express');
+  // const mongoose = require('mongoose');
+  // const bodyParser = require('body-parser');
+  // const bcrypt = require('bcrypt');
+  // const cors = require('cors');
+  // const twilio = require('twilio');
+  // const Razorpay = require('razorpay'); // Import Razorpay
+  
 
 // const app = express();
 // const PORT = process.env.PORT || 1000;

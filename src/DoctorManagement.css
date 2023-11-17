@@ -116,11 +116,15 @@ body, html {
     background-color: #E74C3C;
     color: white;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 50px;
     border: none;
     cursor: pointer;
     float: right; /* Align the logout button to the right */
     margin: 20px 0;
+    width: 400px;
+    position: relative;
+    right: 25rem;
+    z-index: 20;
   }
   
   .logout-button:hover {
