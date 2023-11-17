@@ -246,6 +246,9 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './DoctorManagement.css';
 import pic from './Project.png'
+//import { TimingsProvider } from './TimingsContext';
+//import TestTime from './TestTime';
+
 
 function DoctorManagement() {
   const [doctor, setDoctor] = useState(null);
@@ -253,10 +256,28 @@ function DoctorManagement() {
   const [availableTimings, setAvailableTimings] = useState([]);
   const [qrCodeData, setQRCodeData] = useState('');
   const navigate = useNavigate();
+  const [selectedStatus, setSelectedStatus] = useState('');
+
+    const handleSelectChange = (event) => {
+        const selectedValue = event.target.value;
+        setSelectedStatus(selectedValue);
+
+        // Inform the server about the status change
+        // The server should handle this to make data available for TestTime
+        fetch('http://localhost:1000/api/set-status', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ status: selectedValue }),
+        })
+        .catch(error => console.error('Error:', error));
+    };
 
   useEffect(() => {
     axios.get('http://localhost:1000/api/doctor')
       .then((response) => {
+        console.log("Doctor Data:", response.data); // Debugging log
         setDoctor(response.data);
         setAvailabilityStatus(response.data.availabilityStatus);
         setQRCodeData(JSON.stringify(response.data));
@@ -307,18 +328,19 @@ function DoctorManagement() {
       </aside>
       <div className="content-area">
         <div className="greeting-header">
-          <div>Welcome, {doctor ? doctor.name : 'Doctor'}</div>
+        <div>Welcome, {doctor ? `Dr. ${doctor.name}` : 'Doctor'}</div>
           <div>
           <img src={pic} alt="Doctors" className="header-image" />
 
             <label>Availability Status:</label>
             <select
-              value={availabilityStatus}
-              onChange={(e) => handleAvailabilityChange(e.target.value)}
+              value={selectedStatus}
+              onChange={handleSelectChange}
             >
+              <option value="">Select Status</option>
               <option value="Available">Available</option>
-              <option value="On Break">On Break</option>
-              <option value="Out of Office">Out of Office</option>
+              <option value="Unavailable">On Break</option>
+              <option value="Unavailable">Out of Office</option>
             </select>
           </div>
         </div>

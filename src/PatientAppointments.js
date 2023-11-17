@@ -1279,22 +1279,28 @@
 import './PatientAppointments.css';
  import Photo from './papoint.png';
  import Chatbot from "./ChatBot.js";
-
-
-function PatientAppointments({ patientName }) {
-  const [selectedSpecialty, setSelectedSpecialty] = useState('');
-  const [availableTimings, setAvailableTimings] = useState([]);
-  const [selectedTiming, setSelectedTiming] = useState('');
-  const [selectedDate, setSelectedDate] = useState(null); // State for the selected date
-  const [appointmentType, setAppointmentType] = useState('regular'); // State for appointment type
-  const [appointmentConfirmed, setAppointmentConfirmed] = useState(false);
+ //import { TimingsProvider } from './TimingsContext';
+ //import FetchTest from './FetchTest';
+ 
+ 
+ 
+ function PatientAppointments({ patientName }) 
+ {
+   const [selectedSpecialty, setSelectedSpecialty] = useState('');
+   const [availableTimings, setAvailableTimings] = useState([]);
+   const [selectedTiming, setSelectedTiming] = useState('');
+   const [selectedDate, setSelectedDate] = useState(null); // State for the selected date
+   const [appointmentType, setAppointmentType] = useState('regular'); // State for appointment type
+   const [appointmentConfirmed, setAppointmentConfirmed] = useState(false);
+   const [timings, setTimings] = useState([]);
   const navigate = useNavigate();
+  
+  useEffect(() => {
+    if (patientName) {
+      // You can fetch patient data here if needed
+      // Replace with your logic
+    }
 
-   useEffect(() => {
-     if (patientName) {
-       // You can fetch patient data here if needed
-       // Replace with your logic
-   }
    }, [patientName]);
 
        useEffect(() => {
@@ -1311,6 +1317,15 @@ function PatientAppointments({ patientName }) {
       setAvailableTimings([]);
     }
   }, [selectedSpecialty]);
+
+    useEffect(() => {
+        fetch('http://localhost:1000/api/timings')
+            .then(response => response.json())
+            .then(data => {
+                setTimings(data.items);
+            })
+            .catch(error => console.error('Error:', error));
+    }, []);
 
   const handleConfirmAppointment = () => {
     if (!selectedSpecialty) {
@@ -1397,12 +1412,12 @@ function PatientAppointments({ patientName }) {
           value={selectedTiming}
           onChange={(e) => setSelectedTiming(e.target.value)}
         >
-          <option value="">Select Timing</option>
-          {availableTimings.map((timing) => (
-            <option key={timing} value={timing}>
-              {timing}
-            </option>
-          ))}
+        
+        <option value="">Select Timing</option>
+                {timings.map((time, index) => (
+                    <option key={index} value={time}>{time}</option>
+                ))}
+
         </select>
       </div>
       <div className="form-group">
@@ -1434,7 +1449,7 @@ function PatientAppointments({ patientName }) {
         <img src={Photo} alt="Doctor and patient" className="docimg" />
       </div>
      </div>
-     <Chatbot/>
+     <Chatbot/>        
      </div>
    );
  }
