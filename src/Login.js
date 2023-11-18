@@ -170,7 +170,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import doct2 from './Rejs.png';
-const Login = () => {
+const Login = ({setUser}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [userType, setUserType] = useState('patient');
@@ -189,11 +189,8 @@ const Login = () => {
       if (response.ok) {
         const data = await response.json();
         alert(data.message);
-        if (userType === 'doctor') {
-          navigate('/doctormanagement');
-        } else {
-          navigate('/patientappointments');
-        }
+        setUser({ isAuthenticated: true, type: userType }); // Update user type
+        navigate(userType === 'doctor' ? '/doctormanagement' : '/patientappointments');
       } else {
         const errorData = await response.json();
         alert(errorData.error);

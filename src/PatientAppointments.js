@@ -1289,7 +1289,7 @@ import './PatientAppointments.css';
    const [selectedSpecialty, setSelectedSpecialty] = useState('');
    const [availableTimings, setAvailableTimings] = useState([]);
    const [selectedTiming, setSelectedTiming] = useState('');
-   const [selectedDate, setSelectedDate] = useState(null); // State for the selected date
+   const [selectedDate, setSelectedDate] = useState(new Date()); // State for the selected date
    const [appointmentType, setAppointmentType] = useState('regular'); // State for appointment type
    const [appointmentConfirmed, setAppointmentConfirmed] = useState(false);
    const [timings, setTimings] = useState([]);
@@ -1404,6 +1404,7 @@ import './PatientAppointments.css';
           selected={selectedDate}
           onChange={(date) => setSelectedDate(date)} // Set the selected date
           dateFormat="dd/MM/yyyy" // Date format
+          minDate={new Date()}
         />
       </div>
       <div className="form-group">
