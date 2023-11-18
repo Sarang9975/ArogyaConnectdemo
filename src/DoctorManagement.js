@@ -246,12 +246,14 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './DoctorManagement.css';
 import pic from './Project.png'
+import { useStatus } from './StatusContext';
 //import { TimingsProvider } from './TimingsContext';
 //import TestTime from './TestTime';
 
 
 function DoctorManagement() {
   const [doctor, setDoctor] = useState(null);
+  const { status, setStatus } = useStatus(); // Use context for status
   const [availabilityStatus, setAvailabilityStatus] = useState('Available');
   const [availableTimings, setAvailableTimings] = useState([]);
   const [qrCodeData, setQRCodeData] = useState('');
@@ -260,7 +262,7 @@ function DoctorManagement() {
 
     const handleSelectChange = (event) => {
         const selectedValue = event.target.value;
-        setSelectedStatus(selectedValue);
+        setStatus(selectedValue);
 
         // Inform the server about the status change
         // The server should handle this to make data available for TestTime
@@ -334,13 +336,13 @@ function DoctorManagement() {
 
             <label>Availability Status:</label>
             <select
-              value={selectedStatus}
+              value={status}
               onChange={handleSelectChange}
             >
-              <option value="">Select Status</option>
+              <option value="Select Status">Select Status</option>
               <option value="Available">Available</option>
               <option value="Unavailable">On Break</option>
-              <option value="Unavailable">Out of Office</option>
+              <option value="Not Available">Out of Office</option>
             </select>
           </div>
         </div>

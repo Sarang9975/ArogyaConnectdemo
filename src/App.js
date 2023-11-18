@@ -9,6 +9,7 @@ import DoctorManagement from './DoctorManagement';
 import Navbar from './Navbar.js';
 import Homepage from './Homepage.js';
 import About from './About.js';
+import { StatusProvider } from './StatusContext';
 function App() {
   const [user, setUser] = useState(null);
   //Added some inline styline so due to removal of Login and Register Links
@@ -17,6 +18,7 @@ function App() {
   };
 
   return (
+    <StatusProvider>
     <Router>
       <Navbar />
       <div className="App" style={mainContentStyle}>
@@ -35,6 +37,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </StatusProvider>
   );
 }
 
