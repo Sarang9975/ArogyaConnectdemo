@@ -277,7 +277,7 @@ function DoctorManagement() {
     };
 
   useEffect(() => {
-    axios.get('https://arogyaconnectdemo.onrender.com//api/doctor')
+    axios.get('https://arogyaconnectdemo.onrender.com/api/doctor')
       .then((response) => {
         console.log("Doctor Data:", response.data); // Debugging log
         setDoctor(response.data);
@@ -299,7 +299,7 @@ function DoctorManagement() {
   };
 
   const handleAvailabilityChange = (newAvailability) => {
-    axios.put(`https://arogyaconnectdemo.onrender.com//api/doctor/${doctor._id}`, {
+    axios.put(`https://arogyaconnectdemo.onrender.com/api/doctor/${doctor._id}`, {
       availabilityStatus: newAvailability,
     })
       .then(() => {
