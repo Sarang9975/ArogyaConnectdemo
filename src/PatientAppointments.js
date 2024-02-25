@@ -1305,7 +1305,7 @@ import './PatientAppointments.css';
 
        useEffect(() => {
      if (selectedSpecialty) {
-      fetch(`http://localhost:1000/api/available-timings?specialty=${selectedSpecialty}`)
+      fetch(`https://arogyaconnectdemo.onrender.com/api/available-timings?specialty=${selectedSpecialty}`)
         .then((response) => response.json())
         .then((data) => {
           setAvailableTimings(data);
@@ -1319,7 +1319,7 @@ import './PatientAppointments.css';
   }, [selectedSpecialty]);
 
     useEffect(() => {
-        fetch('http://localhost:1000/api/timings')
+        fetch('https://arogyaconnectdemo.onrender.com//api/timings')
             .then(response => response.json())
             .then(data => {
                 setTimings(data.items);
@@ -1349,7 +1349,7 @@ import './PatientAppointments.css';
       appointmentType, // Include the selected appointment type
     };
 
-    fetch('http://localhost:1000/api/appointments', {
+    fetch('https://arogyaconnectdemo.onrender.com//api/appointments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
