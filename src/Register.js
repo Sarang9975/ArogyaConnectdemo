@@ -923,7 +923,7 @@ const Register = () => {
   const handleRegister = async () => {
     try {
       // Make a POST request to the registration endpoint on your server
-      const response = await fetch('http://localhost:1000/api/register', {
+      const response = await fetch('https://arogyaconnectdemo.onrender.com/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
