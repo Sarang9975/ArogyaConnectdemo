@@ -9,6 +9,7 @@ import Navbar from './Navbar.js';
 import Homepage from './Homepage.js';
 import About from './About.js';
 import { StatusProvider } from './StatusContext';
+import Footer from './Footer.js';
 
 function App() {
   const [user, setUser] = useState({ isAuthenticated: false, type: null });
@@ -36,6 +37,7 @@ function App() {
             )}
         </Routes>
       </div>
+      <Footer/>
     </Router>
     </StatusProvider>
   );
