@@ -1,8 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import './Homepage.css';
-import logo from './Arogclogo.png';
 import heroImage from './hero3.png'; // You should update the path to the actual image file
 import missionImage from './missionpic.png'; // Update the path accordingly
 import telemedicineImage from './enhacement.png'; // Update the path accordingly
@@ -10,17 +8,15 @@ import QueueImage from './whyqueue.png'; // Replace with your actual image path
 import ChatbotImage from './whybot.jpg'; // Replace with your actual image path
 import QrCodeImage from './whyqr.jpg'; // Replace with your actual image path
 import EhrImage from './whyehr2.png'; // Replace with your actual image path
-import ytlogo from './youtubepng.png'; // Replace with your actual image path
-import iglogo from './instalogo.png'; // Replace with your actual image path
+import Footer from './Footer.js';
+
 
 
 
 function host() {
   
-
-  
-  
   return (
+    <>
     <div className="App">
       
       <main>
@@ -98,8 +94,12 @@ function host() {
            <button className="see-more-btn">See More</button>
         </section>
 
+
+
       </main>
     </div>
+    <Footer/>
+    </>
   );
 }
 

@@ -1,6 +1,5 @@
 // Navbar.js
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Footer.css';
 import ytlogo from './youtubepng.png'; // Replace with your actual image path
 import iglogo from './instalogo.png'; // Replace with your actual image path
