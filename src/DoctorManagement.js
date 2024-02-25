@@ -266,7 +266,7 @@ function DoctorManagement() {
 
         // Inform the server about the status change
         // The server should handle this to make data available for TestTime
-        fetch('http://localhost:1000/api/set-status', {
+        fetch('https://arogyaconnectdemo.onrender.com/api/set-status', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -277,7 +277,7 @@ function DoctorManagement() {
     };
 
   useEffect(() => {
-    axios.get('http://localhost:1000/api/doctor')
+    axios.get('https://arogyaconnectdemo.onrender.com//api/doctor')
       .then((response) => {
         console.log("Doctor Data:", response.data); // Debugging log
         setDoctor(response.data);
@@ -299,7 +299,7 @@ function DoctorManagement() {
   };
 
   const handleAvailabilityChange = (newAvailability) => {
-    axios.put(`http://localhost:1000/api/doctor/${doctor._id}`, {
+    axios.put(`https://arogyaconnectdemo.onrender.com//api/doctor/${doctor._id}`, {
       availabilityStatus: newAvailability,
     })
       .then(() => {
