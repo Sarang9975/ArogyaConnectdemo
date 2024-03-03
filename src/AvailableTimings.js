@@ -5,7 +5,7 @@ function AvailableTimings() {
 
   useEffect(() => {
     // Fetch available timings data from the backend when the component mounts
-    fetch('http://localhost:1000/api/available-timings')
+    fetch('https://arogyaconnectdemo.onrender.com/api/available-timings')
       .then((response) => response.json())
       .then((data) => {
         setTimings(data);

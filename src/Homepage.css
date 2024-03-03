@@ -313,11 +313,10 @@ a:hover {
 
 /* AAAAAAAAAA FOOOOTTTERERRRR */
 .App-footer {
-  background: #C8ECF2;
+  background: #DCFFFB;
   color: rgb(0, 0, 0);
   display: flex;
-  justify-content: space-around;
-  padding: 40px 0;
+  padding: 40px 40px;
   font-size: 1.2rem;
 }
 

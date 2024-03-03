@@ -1,0 +1,77 @@
+.App-footer {
+    background: #DCFFFB;
+    color: rgb(0, 0, 0);
+    display: flex;
+    padding: 40px 40px;
+    margin-top:220px;
+    font-size: 1.2rem;
+  }
+  
+  .App-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .App-footer .footer-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .App-footer .footer-section h4 {
+    color: #0c1112;
+    margin-bottom: 15px;
+  }
+  
+  .App-footer .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .App-footer .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .App-footer .footer-section p,
+  .App-footer .footer-section li {
+    color: #111c1e;
+    line-height: 1.4;
+  }
+  
+  .App-footer .footer-section .logo {
+    align-items: flex-start;
+  }
+  
+  /* Social media icons */
+  .App-footer .social-media a {
+    display: inline-block;
+    margin-right: 10px;
+  
+  }
+  
+  .App-footer .social-media img {
+    width: 60px; /* Adjust as needed */
+    height: auto;
+  }
+  
+  /* Responsive design for the footer */
+  @media (max-width: 768px) {
+    .App-footer .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .App-footer .footer-section {
+      margin-bottom: 20px;
+    }
+  
+    .App-footer .footer-section h4 {
+      text-align: center;
+    }
+  
+    .App-footer .social-media {
+      text-align: center;
+    }
+  }

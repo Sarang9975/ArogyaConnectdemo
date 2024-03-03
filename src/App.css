@@ -1,0 +1,45 @@
+.deniedMessageContainer {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 999; /* Ensure it's on top of other elements */
+    opacity: 0; /* Initially hide */
+    animation: fadeIn 0.5s ease forwards; /* Fade-in animation */
+  }
+  
+  .deniedMessage {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text color */
+    padding: 20px; /* Add some padding */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Drop shadow */
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center; /* Center text */
+    animation: slideIn 0.5s ease forwards; /* Slide-in animation */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  

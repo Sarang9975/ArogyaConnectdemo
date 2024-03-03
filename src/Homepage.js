@@ -1,8 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import './Homepage.css';
-import logo from './Arogclogo.png';
 import heroImage from './hero3.png'; // You should update the path to the actual image file
 import missionImage from './missionpic.png'; // Update the path accordingly
 import telemedicineImage from './enhacement.png'; // Update the path accordingly
@@ -10,17 +8,15 @@ import QueueImage from './whyqueue.png'; // Replace with your actual image path
 import ChatbotImage from './whybot.jpg'; // Replace with your actual image path
 import QrCodeImage from './whyqr.jpg'; // Replace with your actual image path
 import EhrImage from './whyehr2.png'; // Replace with your actual image path
-import ytlogo from './youtubepng.png'; // Replace with your actual image path
-import iglogo from './instalogo.png'; // Replace with your actual image path
+import Footer from './Footer.js';
+
 
 
 
 function host() {
   
-
-  
-  
   return (
+    <>
     <div className="App">
       
       <main>
@@ -98,40 +94,12 @@ function host() {
            <button className="see-more-btn">See More</button>
         </section>
 
-        <footer className="App-footer">
-        <div className="footer-content">
-          <div className="footer-section logo">
-            <img src={logo} alt="ArogyaConnect Logo" className='Logo'/>
-            
-          </div>
-          <div className="footer-section links">
-            <h4>Links</h4>
-            <ul className='foot'>
-              <li>Service Areas</li>
-              <li>Blogs</li>
-              <li>About</li>
-              <li>Contacts</li>
-              <li>Solutions</li>
-            </ul>
-          </div>
-          <div className="footer-section contact">
-            <h4>Contact</h4>
-            <p>ArogyaConnect</p>
-            <p>+917387130524</p>
-            <p>+919356274667</p>
-            <p>arogyaconnectwork@gmail.com</p>
-          </div>
-          <div className="footer-section social-media">
-            <h4>Follow us on</h4>
-            {/* Icons or links to social media */}
-            <a href="www.youtube.com/arogyaconnect"><img src={ytlogo} alt="Youtube" /></a>
-            <a href="www.instagram.com"><img src={iglogo} alt="Instagram" /></a>
-          </div>
-        </div>
-      </footer>
+
 
       </main>
     </div>
+    <Footer/>
+    </>
   );
 }
 

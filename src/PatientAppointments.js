@@ -1276,7 +1276,7 @@
  import { useNavigate } from 'react-router-dom';
  import DatePicker from 'react-datepicker'; // Import the date picker component
  import 'react-datepicker/dist/react-datepicker.css'; // Import the date picker styles
-import './PatientAppointments.css';
+ import './PatientAppointments.css';
  import Photo from './papoint.png';
  import Chatbot from "./ChatBot.js";
  //import { TimingsProvider } from './TimingsContext';
@@ -1305,7 +1305,7 @@ import './PatientAppointments.css';
 
        useEffect(() => {
      if (selectedSpecialty) {
-      fetch(`http://localhost:1000/api/available-timings?specialty=${selectedSpecialty}`)
+      fetch(`https://arogyaconnectdemo.onrender.com/api/available-timings?specialty=${selectedSpecialty}`)
         .then((response) => response.json())
         .then((data) => {
           setAvailableTimings(data);
@@ -1319,7 +1319,7 @@ import './PatientAppointments.css';
   }, [selectedSpecialty]);
 
     useEffect(() => {
-        fetch('http://localhost:1000/api/timings')
+        fetch('https://arogyaconnectdemo.onrender.com/api/timings')
             .then(response => response.json())
             .then(data => {
                 setTimings(data.items);
@@ -1349,7 +1349,7 @@ import './PatientAppointments.css';
       appointmentType, // Include the selected appointment type
     };
 
-    fetch('http://localhost:1000/api/appointments', {
+    fetch('https://arogyaconnectdemo.onrender.com/api/appointments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -1415,8 +1415,10 @@ import './PatientAppointments.css';
         >
         
         <option value="">Select Timing</option>
-                {timings.map((time, index) => (
-                    <option key={index} value={time}>{time}</option>
+                {availableTimings.map((time) => (
+                    <option key={time} value={time}>
+                      {time}
+                    </option>
                 ))}
 
         </select>
