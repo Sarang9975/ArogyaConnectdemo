@@ -2,7 +2,8 @@
     position: static;
     width: 650px;
     height: 500px;
-    margin: 30px;
+    margin: 50px;
+    margin-top: 5.5rem;
     padding: 2.5rem;
     background-color: #e5f4ff;
     box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
@@ -34,10 +35,13 @@
   }
   
   .about-image {
-    position: fixed;
+    flex-wrap: wrap;
     left: 730px;
     width: 750px;
-    bottom: -10px;
     height: 750px;
     z-index: 6;
+  }
+
+  .main{
+    display: flex;
   }

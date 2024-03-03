@@ -45,7 +45,11 @@ function PatElement({ children, user }) {
   if (user && user.type === 'patient') {
     return <>{children}</>;
   } else {
-    return <div>Access Denied: You are not a Patient</div>;
+    return (
+      <div className="deniedMessageContainer"> {/* Container div */}
+        <div className="deniedMessage">Access Denied: You are not a Patient! please login to Access</div>
+      </div>
+    );
   }
 }
 
@@ -53,7 +57,11 @@ function DocElement({ children, user }) {
   if (user && user.type === 'doctor') {
     return <>{children}</>;
   } else {
-    return <div>Access Denied: You are not a Doctor</div>;
+    return (
+      <div className="deniedMessageContainer"> {/* Container div */}
+        <div className="deniedMessage">Access Denied: You are not a Doctor! please login to Access</div>
+      </div>
+    );
   }
 }
 
